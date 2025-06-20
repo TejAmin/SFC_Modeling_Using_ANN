@@ -1,0 +1,50 @@
+"""
+main.py — load, tidy and visualise data
+---------------------------------------
+Now shows plots *before* and *after* preprocessing.
+"""
+
+from pathlib import Path
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+from utils import load_txt_folder     
+from visualize import  visualize
+from tidy import tidy_features   # your existing loader
+
+def main() -> None:
+    try:
+        script_dir = Path(__file__).resolve().parent
+    except NameError:
+        script_dir = Path.cwd()
+
+    data_dir = script_dir.parent / "Data"    
+
+    df_raw = load_txt_folder(data_dir, sep="\t")        # ↪ raw
+
+    print("\nRaw data preview:")
+    print(df_raw.head())
+
+    # ── 1️⃣  Visualise BEFORE preprocessing ─────────────────────────
+    visualize(df_raw)
+
+    # ── 2️⃣  Preprocess, then visualise AFTER ───────────────────────
+    df_clean = tidy_features(df_raw, corr_thresh=0.95)
+
+    print("\nCleaned data preview:")
+    print(df_clean.head())
+
+    visualize(df_clean)
+
+if __name__ == "__main__":
+    main()
+
+    print(
+        "\nWorkflow:\n"
+        "  • Loads all text files in data_dir\n"
+        "  • Visualises *raw* data (heat-map + histograms)\n"
+        "  • Engineers spread & skew, drops high-corr features\n"
+        "  • Visualises *clean* data\n"
+        "\nAdjust paths, separators, or the correlation threshold as needed."
+    )
