@@ -52,9 +52,9 @@ def tidy_features(
     upper = corr.where(np.triu(np.ones(corr.shape), k=1).astype(bool))
     to_drop = [col for col in upper.columns if any(upper[col] > corr_thresh)]
 
-    if to_drop:
-        df.drop(columns=to_drop, inplace=True)
-        print(f"Dropped {len(to_drop)} highly correlated feature(s): {to_drop}")
+   # if to_drop:
+   #     df.drop(columns=to_drop, inplace=True)
+   #     print(f"Dropped {len(to_drop)} highly correlated feature(s): {to_drop}")
 
     return df
 
