@@ -1,4 +1,4 @@
-# MLME25: Data-based Modeling of Slug Flow Crystallization with Uncertainty Quantification
+# Data-based Modeling of Slug Flow Crystallization with Uncertainty Quantification
 
 ##  Introduction
 
