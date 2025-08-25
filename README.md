@@ -37,7 +37,6 @@ Additional investigations test the robustness of open-loop predictions and alter
 ├── Additional_Task_3.ipynb     # Alternative uncertainty quantification
 ├── BeatTheFelix.ipynb          # Competition evaluation
 ├── Group 11_Report_MLME.pdf    # Final report
-├── Group 11_MLME_PPT.pptx      # Presentation slides
 ├── AI_Usage_Report.pdf         # Declaration of AI tool usage
 ├── README.md                   # This README file
 ```
