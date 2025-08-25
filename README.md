@@ -48,8 +48,8 @@ Additional investigations test the robustness of open-loop predictions and alter
 1. **Clone this repository:**
 
 ```bash
-git clone https://github.com/yourusername/mlme25-sfc-modeling.git
-cd mlme25-sfc-modeling
+git clone https://github.com/<username>/SFC_Modeling_Using_ANN.git
+
 ```
 
 2. **Create a virtual environment (recommended):**
